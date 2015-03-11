@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.nasrullah.hello" version="1.0.0">
   <name>Channelling</name>
   <description>Channelling application which lets the users to set appointments with doctors </description>
-  <author href="http://perfectmediaqatar.com" email="anm.nasrullah@gmail.com"">Nasrullah</author>
+  <author href="http://perfectmediaqatar.com" email="anm.nasrullah@gmail.com">Nasrullah</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
