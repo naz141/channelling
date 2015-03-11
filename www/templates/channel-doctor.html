@@ -1,0 +1,47 @@
+<ion-view view-title="Search Doctors">
+  <ion-content class="padding">
+  
+  <div class="list"> 
+<label class="item item-input item-select">
+    <div class="input-label">
+      Hospital
+    </div>
+    <select>
+      <option>Al Emadi Hospital</option>
+      <option selected>Hamad General Hospital</option>
+      <option>Sidra Medical and Research Center</option>
+	  <option>Al-Ahli Hospital</option>
+	  <option>Doha Clinic Hospital</option>
+	  <option>American Hospital</option>
+	  <option>Rumailah Hospital</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Specialty   
+    </div>
+    <select>
+      <option>Allergy & Immunology</option>
+      <option selected>Surgery</option>
+      <option>Cardiology</option>
+	  <option>Dermatology</option>
+	  <option>Gastroenterology</option>
+	  <option>Dentist</option>
+	  
+    </select>
+  </label>
+</div>
+<button class="button button-block button-positive" ng-click="showDetails = ! showDetails">
+ Search
+</button>
+<ul class="list" ng-show="showDetails">
+	<li ui-sref="docdetails" class="item">Dr C. Gayle</li>
+    <li class="item">Dr A.B. Taylor</li>
+	<li class="item">Dr C.J. Smith</li>
+	<li class="item">Dr Tommy Gorge</li>
+	<li class="item">Dr Ricky Ponting</li>
+	<li class="item">Dr S. Fleming</li>
+	
+</ul>
+  </ion-content>
+</ion-view>
