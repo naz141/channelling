@@ -32,7 +32,7 @@ angular.module('starter.controllers', [])
               title: 'Success!',
               content: '<p>Your Appointment has been sent successfully and it is still on pending.  </p><p>Please wait till we notify you once the administration approves your appointment</p><p>Thank you</p>'
 			}).then(function() {
-			$state.go('mystatus');
+			$state.go('tab.tab-welcome');
             });
           };
   
