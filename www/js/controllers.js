@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 .controller('ChannelCtrl', function($scope) {})
 .controller('MyprofileCtrl', function($scope) {})
 .controller('MystatusCtrl', function($scope) {})
-.controller('DocdetailsCtrl', function($scope) {})
+
 
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
@@ -23,6 +23,22 @@ angular.module('starter.controllers', [])
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
+
+.controller('DocdetailsCtrl', function($scope, $timeout, $q, $ionicPopup, $state) {
+
+  
+          $scope.showAlert = function() {
+            $ionicPopup.alert({
+              title: 'Success!',
+              content: '<p>Your Appointment has been sent successfully and it is still on pending.  </p><p>Please wait till we notify you once the administration approves your appointment</p><p>Thank you</p>'
+			}).then(function() {
+			$state.go('mystatus');
+            });
+          };
+  
+})
+
+
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {

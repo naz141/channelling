@@ -1797,6 +1797,7 @@ html {
   touch-action: pan-y; }
 
 body, .ionic-body {
+
   -webkit-touch-callout: none;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -1833,6 +1834,7 @@ body.grade-b, body.grade-c {
   position: relative; }
 
 .scroll-content {
+background:#D2E0F7;
   position: absolute;
   top: 0;
   right: 0;
@@ -4324,8 +4326,8 @@ a.item-content {
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 30px;
-  background-color: #f5f5f5;
-  color: #222;
+  background-color: #387ef5;
+  color: #FFFFFF;
   font-weight: 500; }
 
 .platform-ios .item-divider-platform, .item-divider-ios {
@@ -6273,6 +6275,9 @@ a.button {
 
 .col-offset-33, .col-offset-34 {
   margin-left: 33.3333%; }
+  .col-offset-35 {
+  margin-left: 36.3333%;
+  }
 
 .col-offset-50 {
   margin-left: 50%; }
@@ -6849,3 +6854,12 @@ a.button {
     display: block;
     margin-left: auto;
     margin-right: auto }
+	
+	.topbot {
+	margin-top: 20%;
+	color:#8A8A8A;
+    }
+	.mybody
+	{
+	color: #C4E0FF;
+	}
