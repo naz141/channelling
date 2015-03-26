@@ -43,9 +43,9 @@
 </div>
 
 <div align="center" data-ng-show="loading"><ion-spinner></ion-spinner></div>
-<!-- <ion-item ng-repeat="doclist in allDocs" href="#/tab/chats/{{doclist.doc_id}}">-->
+
 <ion-list>
-      <ion-item ng-repeat="doclist in allDocs" href="#/docdetails">
+      <ion-item ng-repeat="doclist in allDocs" href="#/tab/chats/{{doclist.doc_id}}">
         
 		<h2>{{doclist.doc_name}}</h2>
         
