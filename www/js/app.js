@@ -57,15 +57,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.chat-detail', {
+   .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+          controller: 'DocDetailCtrl'
         }
       }
-    })
+    }) 
+ /* 	.state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    templateUrl: 'templates/chat-detail.html',
+    controller : "DocDetailCtrl"
+  })*/
 	
 	 .state('tab.tab-welcome', {
       url: '/welcome',
@@ -85,13 +90,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('channel', {
 	  url :'/channel',
 	  templateUrl: 'templates/channel-doctor.html',
-	  controller: "ChannelCtrl"
+	  controller: "SearchCntrl" 
   })
   .state('myprofile', {
 	  url :'/myprofile',
 	  templateUrl: 'templates/my-profile.html',
 	  controller: "MyprofileCtrl" 
   })
+  .state('form', {
+	  url :'/form',
+	  templateUrl: 'templates/form.html',
+	  controller: "customersController" 
+  })  
   .state('mystatus', {
 	  url :'/mystatus',
 	  templateUrl: 'templates/my-status.html',

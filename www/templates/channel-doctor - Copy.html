@@ -36,20 +36,36 @@
              <button  ng-click="getDoc(List)" class="button button-block button-positive">SUBMIT</button>
 			 
             </form>
-		
+			<ul class="list">
+	<li ng-repeat="doclist in allDocs" class="item">{{doclist.doc_name}} {{doclist.doc_id}} </li>
+   
+	
+</ul>
+
+	<label ng-repeat="doclist in allDocs">
+   
+	<span> {{doclist.doc_name}} {{doclist.doc_id}} </span>
+	
+    </label>
+			
 
 
 
 </div>
 
-<div align="center" data-ng-show="loading"><ion-spinner></ion-spinner></div>
-<!-- <ion-item ng-repeat="doclist in allDocs" href="#/tab/chats/{{doclist.doc_id}}">-->
-<ion-list>
-      <ion-item ng-repeat="doclist in allDocs" href="#/docdetails">
-        
-		<h2>{{doclist.doc_name}}</h2>
-        
-      </ion-item>
-    </ion-list>
+<div data-ng-show="loading"><ion-spinner></ion-spinner></div>
+<button class="button button-block button-positive" ng-click="showDetails = ! showDetails">
+ Search
+</button>
+
+<ul class="list" ng-show="showDetails">
+	<li ui-sref="docdetails" class="item">Dr C. Gayle</li>
+    <li class="item">Dr A.B. Taylor</li>
+	<li class="item">Dr C.J. Smith</li>
+	<li class="item">Dr Tommy Gorge</li>
+	<li class="item">Dr Ricky Ponting</li>
+	<li class="item">Dr S. Fleming</li>
+	
+</ul>
   </ion-content>
 </ion-view>

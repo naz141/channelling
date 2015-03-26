@@ -1,33 +1,31 @@
 <ion-view view-title="Status">
   
  
-   <ion-content class="padding">
+  <ion-content class="padding">
     <div class="item item-divider">
   All Appointments
    </div>
-  <div class="card">
+ 
+<div ng-repeat="mystatus in appstatus"  class="card">
   <div class="item item-divider">
-    Dr C. Gayle
+    {{mystatus.doc_name}}
   </div>
   <div class="item item-text-wrap">
+  <div ng-if="0 == mystatus.status">
    Status: <span class="assertive">Pending</span>
+</div>
+<div ng-if="0 != mystatus.status">
+  Status: <span class="balanced">Approved</span>
+</div>
+   
   </div>
   <div class="item item-divider">
-    <h4> Date: 01/05/2015 </h4>
-	<h4> Time: 10:00 AM </h4>
+    <h4> Date: {{mystatus.date}} </h4>
+	<h4> Time: {{mystatus.time}} </h4>
   </div>
 </div>
-  <div class="card">
-  <div class="item item-divider">
-    Dr A.B. Taylor
-  </div>
-  <div class="item item-text-wrap">
-   Status: <span class="balanced">Approved</span>
-  </div>
-  <div class="item item-divider">
-    <h4> Date: 01/01/2015 </h4>
-	<h4> Time: 3:00 PM </h4>
-  </div>
-</div>
+ <div align="center" data-ng-show="loading"><ion-spinner></ion-spinner></div>
+
+
 </ion-content>
 </ion-view>
