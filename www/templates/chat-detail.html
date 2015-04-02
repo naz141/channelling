@@ -1,5 +1,10 @@
 
 <ion-view view-title="Doctor Details">
+<ion-nav-buttons side="left">
+          <a  ui-sref="channel" class="button button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+          </a>
+        </ion-nav-buttons>
   <ion-content class="padding">
   <form>
 
@@ -7,6 +12,7 @@
    <h2 ng-repeat="doclist in allDocs|limitTo:1">{{doclist.doc_name}}</h2>
    
    </div>
+   
   
   <div class="card">
   <div class="item item-divider">

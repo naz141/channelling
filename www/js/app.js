@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // setup an abstract state for the tabs directive
     .state('tab', {
-    url: "/tab",
+    url: "/tab", 
     abstract: true,
     templateUrl: "templates/tabs.html"
   })
@@ -66,6 +66,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     }) 
+	.state('tab.clinic-detail', {
+      url: '/clinic/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/clinic-detail.html',
+          controller: 'ClininDetailCtrl'
+        }
+      }
+    }) 
  /* 	.state('tab.chat-detail', {
     url: '/chats/:chatId',
     templateUrl: 'templates/chat-detail.html',
@@ -92,10 +101,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	  templateUrl: 'templates/channel-doctor.html',
 	  controller: "SearchCntrl" 
   })
+  .state('signup', {
+	  url :'/signup',
+	  templateUrl: 'templates/signup.html',
+	  controller: "SignupCntrl" 
+  })
   .state('myprofile', {
 	  url :'/myprofile',
 	  templateUrl: 'templates/my-profile.html',
-	  controller: "MyprofileCtrl" 
+	  controller: "MyprofileCtrl"
   })
   .state('form', {
 	  url :'/form',
@@ -107,11 +121,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	  templateUrl: 'templates/my-status.html',
 	  controller: "MystatusCtrl" 
   })
+   .state('clstatus', {
+	  url :'/clstatus',
+	  templateUrl: 'templates/cl-status.html',
+	  controller: "MyClstatusCtrl" 
+  })
 .state('docdetails', {
 	  url :'/docdetails',
 	  templateUrl: 'templates/doctor-details.html',
 	  controller: "DocdetailsCtrl" 
   })
+ .state('clinics', {
+	 url :'/clinics',
+	 templateUrl: 'templates/clinics.html',
+	 controller: "ClinicsCtrl" 	 
+ })
   .state('tab.account', {
     url: '/account',
     views: {

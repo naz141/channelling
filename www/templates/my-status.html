@@ -1,12 +1,19 @@
 <ion-view view-title="Status">
-  
+<ion-nav-buttons side="left">
+          <a  ui-sref="welcomebtn" class="button button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+          </a>
+        </ion-nav-buttons>
+		
  
   <ion-content class="padding">
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+      </ion-refresher>
     <div class="item item-divider">
-  All Appointments
+  Doctor Appointments
    </div>
  
-<div ng-repeat="mystatus in appstatus"  class="card">
+<div ng-repeat="mystatus in appstatus"  class="card"> 
   <div class="item item-divider">
     {{mystatus.doc_name}}
   </div>
@@ -19,7 +26,7 @@
 </div>
    
   </div>
-  <div class="item item-divider">
+  <div class="item">
     <h4> Date: {{mystatus.date}} </h4>
 	<h4> Time: {{mystatus.time}} </h4>
   </div>
@@ -28,4 +35,15 @@
 
 
 </ion-content>
+<div class="tabs tabs-icon-top my-tab">
+  <a class="tab-item" ui-sref="mystatus">
+    <i class="icon ion-home"></i>
+    Doctors
+  </a>
+  <a class="tab-item" ui-sref="clstatus">
+    <i class="icon ion-star"></i>
+    Clinics
+  </a>
+ 
+</div>
 </ion-view>

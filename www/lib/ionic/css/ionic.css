@@ -1820,7 +1820,7 @@ body, .ionic-body {
   color: #000;
   word-wrap: break-word;
   font-size: 14px;
-  font-family: "Helvetica Neue", "Roboto", sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -1834,7 +1834,7 @@ body.grade-b, body.grade-c {
   position: relative; }
 
 .scroll-content {
-background:#D2E0F7;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -2333,6 +2333,7 @@ a.subdued {
   .bar.bar-stable {
     border-color: #b2b2b2;
     background-color: #f8f8f8;
+	
     background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
     color: #444; }
     .bar.bar-stable .title {
@@ -2340,9 +2341,10 @@ a.subdued {
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
-    border-color: #0c63ee;
+	background:url(top.png);
+   /* border-color: #0c63ee;
     background-color: #387ef5;
-    background-image: linear-gradient(0deg, #0c63ee, #0c63ee 50%, transparent 50%);
+    background-image: linear-gradient(0deg, #0c63ee, #0c63ee 50%, transparent 50%); */
     color: #fff; }
     .bar.bar-positive .title {
       color: #fff; }
@@ -4326,7 +4328,7 @@ a.item-content {
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 30px;
-  background-color: #387ef5;
+  background-color: #01a6c3;
   color: #FFFFFF;
   font-weight: 500; }
 
@@ -4335,7 +4337,7 @@ a.item-content {
   text-transform: uppercase;
   font-weight: 300;
   font-size: 13px;
-  background-color: #efeff4;
+  background-color: #01a6c3;
   color: #555; }
 
 .platform-android .item-divider-platform, .item-divider-android {
@@ -5816,30 +5818,30 @@ progress {
         box-shadow: none;
         color: #fff; }
   .button.button-positive {
-    border-color: #0c63ee;
-    background-color: #387ef5;
+    border-color: #2f90a1;
+    background-color: #03a4c0;
     color: #fff; }
     .button.button-positive:hover {
       color: #fff;
       text-decoration: none; }
     .button.button-positive.active, .button.button-positive.activated {
-      border-color: #0c63ee;
-      background-color: #0c63ee;
+      border-color: #2f90a1;
+      background-color: #2f90a1;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
     .button.button-positive.button-clear {
       border-color: transparent;
       background: none;
       box-shadow: none;
-      color: #387ef5; }
+      color: #03a4c0; }
     .button.button-positive.button-icon {
       border-color: transparent;
       background: none; }
     .button.button-positive.button-outline {
-      border-color: #387ef5;
+      border-color: #03a4c0;
       background: transparent;
-      color: #387ef5; }
+      color: #03a4c0; }
       .button.button-positive.button-outline.active, .button.button-positive.button-outline.activated {
-        background-color: #387ef5;
+        background-color: #03a4c0;
         box-shadow: none;
         color: #fff; }
   .button.button-calm {
@@ -6862,4 +6864,34 @@ a.button {
 	.mybody
 	{
 	color: #C4E0FF;
+	}
+	.wel-border{
+	border:#d3f8ff thin solid;
+	background: #05a9c5;
+	}
+	
+	.col-demo{
+	background: #FFFFFF;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+	.text-center{
+	   text-align: center;
+	}
+	.res-img{
+	max-width: 100%;
+	height: auto;
+	}
+	
+	.my-tab{
+	color:#000000;
+	}
+	.my-cont{
+	background: rgba(1,34,55,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(1,34,55,1) 0%, rgba(1,28,45,1) 44%, rgba(15,15,15,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(1,34,55,1)), color-stop(44%, rgba(1,28,45,1)), color-stop(100%, rgba(15,15,15,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(1,34,55,1) 0%, rgba(1,28,45,1) 44%, rgba(15,15,15,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(1,34,55,1) 0%, rgba(1,28,45,1) 44%, rgba(15,15,15,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(1,34,55,1) 0%, rgba(1,28,45,1) 44%, rgba(15,15,15,1) 100%);
+background: radial-gradient(ellipse at center, rgba(1,34,55,1) 0%, rgba(1,28,45,1) 44%, rgba(15,15,15,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012237', endColorstr='#0f0f0f', GradientType=1 );
 	}
