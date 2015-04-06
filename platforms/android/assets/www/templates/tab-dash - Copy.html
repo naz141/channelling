@@ -1,0 +1,40 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+  
+  <form name="myForm">
+  <img class="centered" width="170" src="img/my.png">
+
+
+    <div class="list list-inset">
+	
+  <label class="item item-input">
+    <input type="email" name="name" placeholder="Email" ng-model="user.name" required>
+  </label>
+  <span class="error" ng-show="myForm.name.$error.required">Required!</span>
+  <label class="item item-input">
+    <input type="password" placeholder="Password" name="pass" ng-model="user.password" required>
+  </label>
+  <span class="error" ng-show="myForm.pass.$error.required">Required!</span>
+</div>
+{{messages}}
+
+
+
+<button ng-click="loginCheck(user)" class="button button-block button-positive">
+ Login
+</button>
+<a class="button button-block button-positive" ui-sref="signup">SIGN UP</a>
+
+
+<div class="topbot">
+<img class="centered" width="100" src="img/by.png">
+<div class="row">
+<div class="col col-33 col-offset-35">Version 1.0</div>
+</div>
+</div>
+</form
+  </ion-content>
+</ion-view>
+
+
+

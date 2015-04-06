@@ -1,0 +1,49 @@
+
+<ion-view view-title="Doctor Details">
+<ion-nav-buttons side="left">
+          <a  ui-sref="channel" class="button button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+          </a>
+        </ion-nav-buttons>
+  <ion-content class="padding">
+  <form>
+
+  <div class="item item-divider ">
+   <h2 ng-repeat="doclist in allDocs|limitTo:1">{{doclist.doc_name}}</h2>
+   
+   </div>
+   
+  
+  <div class="card">
+  <div class="item item-divider">
+    Available for you on
+  </div>
+   <div align="center" data-ng-show="loading"><ion-spinner></ion-spinner></div>
+  <ion-list >
+	  <ion-item ng-repeat="doclist in allDocs"> <p>{{doclist.days}} - {{doclist.time_in}} - {{doclist.time_out}}</p></ion-item>
+  </ion-list>
+  
+</div>
+<div class="item item-divider">
+    Set My Appointment
+</div> 
+
+<div class="list">
+  <label class="item item-input">
+    <span class="input-label">Date</span>
+	
+    <input ng-model="app.date" class="positive" type="date">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Time</span>
+    <input ng-model="app.time" class="positive" type="time">
+  </label>
+</div>  
+
+<button ng-click="makeApp(app)" class="button button-block button-positive">
+ Confirm Appointment
+</button>
+</form>
+
+  </ion-content>
+</ion-view>

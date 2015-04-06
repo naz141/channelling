@@ -1,0 +1,29 @@
+<ion-view view-title="My Profile">
+<ion-nav-buttons side="left">
+          <a  ui-sref="welcomebtn" class="button button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+          </a>
+        </ion-nav-buttons>
+  <ion-content class="padding">
+  <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
+      </ion-refresher>
+  <div class="item item-divider">
+    Modify My Information
+</div>
+<div align="center" data-ng-show="loading"><ion-spinner></ion-spinner></div>
+<div class="list" ng-repeat="mystatus in appstatus">
+  <label class="item item-input">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="{{mystatus.name}}">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="{{mystatus.email}}">
+  </label>
+  
+</div>
+<button ng-click="clear()" class="button button-block button-assertive">
+LOGOUT
+</button>
+  </ion-content>
+</ion-view>
